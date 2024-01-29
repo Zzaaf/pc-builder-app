@@ -16,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element = {<Home products={products} setProduct={setProduct}/>} />
           <Route path="/profile" element = {<Profile/>} />
+          <Route path="/history" element = {<h1>History</h1>} />
           <Route path="/products/:id" element = {<CurrentProduct products={products}/>} />
         </Routes>
       </section>

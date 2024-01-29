@@ -1,7 +1,14 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link, useNavigate, useLocation  } from 'react-router-dom'
 
 function Nav() {
+    const navigate = useNavigate()
+
+    const location = useLocation();
+    const data = location.state?.url;
+
+    console.log(data);
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -13,6 +20,7 @@ function Nav() {
                 <div className="navbar-nav">
                     <Link to='/' className="nav-link active">Home</Link>
                     <Link to='/profile' className="nav-link active">Profile</Link>
+                    <button onClick={() => navigate('/profile', {state: {url:'/history'}})}>Test</button>
                 </div>
                 </div>
             </div>
