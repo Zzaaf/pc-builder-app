@@ -4,6 +4,7 @@ import Nav from "../features/Nav/Nav";
 import Profile from "../features/Profile/Profile";
 import CurrentProduct from "../features/CurrentProduct/CurrentProduct";
 import { useState } from "react";
+import Products from "../features/Products/Products";
 
 function App() {
   const [products, setProduct] = useState([]);
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element = {<Home products={products} setProduct={setProduct}/>} />
           <Route path="/profile" element = {<Profile/>} />
-          <Route path="/history" element = {<h1>History</h1>} />
+          <Route path="/products" element = {<Products/>} />
           <Route path="/products/:id" element = {<CurrentProduct products={products}/>} />
         </Routes>
       </section>

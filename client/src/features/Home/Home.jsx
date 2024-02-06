@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
 import ProductItem from '../ProductItem/ProductItem';
+import { v4 as uuidv4 } from 'uuid';
 
 function Home({products, setProduct}) {
 
     const demoProduct = {
-        id: 1,
+        id: uuidv4(),
         title: 'Demo', 
         processor: 'Demo', 
         motherboard: 'Demo',
@@ -21,7 +21,7 @@ function Home({products, setProduct}) {
     return (
         <>
             <h1>Home</h1>
-            <button onClick={() => setProduct((prevState) => [...prevState, demoProduct])}>Add</button>
+            <button onClick={() => setProduct((prevState) => [...prevState, demoProduct])}>Add new build</button>
 
             <section>
                 {products && products.map(el => <ProductItem key={el.id} product={el}/>)}
