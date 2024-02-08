@@ -29,16 +29,16 @@
 ```javascript
     const demoProduct = {
       id: 1,
-      title: 'Demo', 
-      processor: 'Demo', 
-      motherboard: 'Demo',
-      cpuCooler: 'Demo',
-      case: 'Demo',
-      graphicsCard: 'Demo',
-      ram: 'Demo', 
-      storage: 'Demo',
-      caseCooler: 'Demo',
-      powerSupply: 'Demo',
+      title: 'Untitled', 
+      processor: 'none', 
+      motherboard: 'none',
+      cpuCooler: 'none',
+      case: 'none',
+      graphicsCard: 'none',
+      ram: 'none', 
+      storage: 'none',
+      caseCooler: 'none',
+      powerSupply: 'none',
     }
 ```
 

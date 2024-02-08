@@ -6,26 +6,40 @@ function Home({products, setProduct}) {
 
     const demoProduct = {
         id: uuidv4(),
-        title: 'Demo', 
-        processor: 'Demo', 
-        motherboard: 'Demo',
-        cpuCooler: 'Demo',
-        case: 'Demo',
-        graphicsCard: 'Demo',
-        ram: 'Demo', 
-        storage: 'Demo',
-        caseCooler: 'Demo',
-        powerSupply: 'Demo'
+        title: 'Untitled', 
+        processor: 'none', 
+        motherboard: 'none',
+        cpuCooler: 'none',
+        case: 'none',
+        graphicsCard: 'none',
+        ram: 'none', 
+        storage: 'none',
+        caseCooler: 'none',
+        powerSupply: 'none',
     }
 
     return (
         <>
             <h1>Home</h1>
-            <button onClick={() => setProduct((prevState) => [...prevState, demoProduct])}>Add new build</button>
+
 
             <section>
                 {products && products.map(el => <ProductItem key={el.id} product={el}/>)}
             </section>
+
+            <form action="" method="post">
+
+                <div className="mb-3">
+                    <select className="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+
+                    <button className="mt-3" onClick={() => setProduct((prevState) => [...prevState, demoProduct])}>Add new build</button>
+                </div>
+            </form>
         </>
     );
 }
