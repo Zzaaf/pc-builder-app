@@ -145,16 +145,16 @@ uuidv4(); // '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 import React from 'react';
 import ProductItem from '../ProductItem/ProductItem';
 
-function Products({products, setProduct}) {
-    return (
-        <>
-        <h1>Products</h1>
+function Products({ products }) {
+  return (
+    <>
+      <h1>Products</h1>
 
-        <section className='d-flex'>
-            {products && products.map(el => <ProductItem key={el.id} product={el}/>)}
-        </section>
-        </>
-    );
+      <section className="d-flex">
+        {products.length ? products.map((el) => <ProductItem key={el.id} product={el} />) : <h3>No data</h3>}
+      </section>
+    </>
+  );
 }
 
 export default Products;

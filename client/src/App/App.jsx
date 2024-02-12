@@ -8,6 +8,7 @@ import Products from '../features/Products/Products';
 
 function App() {
   const [products, setProduct] = useState([]);
+  const [profile, setProfile] = useState({ name: '', email: '', avatar: 'bottts' });
 
   return (
     <section className="container">
@@ -17,7 +18,7 @@ function App() {
         <section className="container">
           <Routes>
             <Route path="/" element={<Home setProduct={setProduct} />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile" element={<Profile profile={profile} setProfile={setProfile} />} />
             <Route path="/products" element={<Products products={products} setProduct={setProduct} />} />
             <Route path="/products/:id" element={<CurrentProduct products={products} />} />
           </Routes>
